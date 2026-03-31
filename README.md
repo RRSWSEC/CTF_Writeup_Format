@@ -1,3 +1,3 @@
-# CTF_Writeup_Format
+# Minimal accepted format: 
 IYKYK
-## This is where the format will go, copy pasta to email
+## Please E-Mail your submission to Operations@RapidRiverSkunk.Works within 7 days of your completion.
