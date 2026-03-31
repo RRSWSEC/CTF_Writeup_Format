@@ -1,4 +1,4 @@
-RRSW DFIR Post-Play Writeup Template
+RRSW Season 2 DFIR Post-Play Writeup Template
 1. Case Information
 
 Case Name:
@@ -9,146 +9,199 @@ Date of Submission:
 
 Environment Used:
 
-OS:
-Tools:
-Version(s):
+OS
+Tools
+Versions
 2. Executive Summary
 
-Provide a clear, high-level summary of the incident.
+Provide a high-level summary of the incident.
 
-Include:
+Your summary should clearly explain:
 
-What happened
-How it was identified
-What the root cause was
-What the final outcome was
+What type of incident occurred
+What system or environment was affected
+What the attacker attempted or achieved
+How the situation was resolved
 
-This should be understandable to a non-technical stakeholder.
+This section should be readable by a non-technical audience.
 
 3. Scope and Objectives
 
-Define what you were asked to do.
+Define the problem space.
 
-What was the goal of the challenge
-What artifacts or systems were provided
+What artifacts or environment were provided
+What your task was as the analyst
 What questions needed to be answered
+
+Focus on understanding the intent of the investigation, not just the mechanics.
+
 4. Initial Triage
 
-Describe your first-pass analysis.
+Document your first interaction with the data.
 
-File type identification
-Integrity checks (hashes if applicable)
-Initial observations
-Anything immediately suspicious
-5. Artifact Analysis
+What type of artifact(s) you received
+How you validated or opened them
+Initial structure or layout observations
+Anything immediately unusual
 
-Break down the provided data.
+Do not skip this section. Early observations often explain later findings.
 
-5.1 File System Analysis
-Directory structure
-Notable files
-Suspicious naming or timestamps
-5.2 Log Analysis
-Relevant logs identified
-Key entries
-Timeline indicators
-5.3 Memory / Process Indicators (if applicable)
-Running processes
-Anomalies
-Parent-child relationships
-6. Timeline Reconstruction
+5. Environment and Artifact Familiarization
 
-Build a chronological sequence of events.
+This section is critical for Season 2.
+
+Describe:
+
+The structure of the environment or dataset
+Key directories, files, or logical groupings
+Any patterns in naming, organization, or formatting
+
+You are expected to demonstrate that you understood the environment before acting on it.
+
+6. Artifact Analysis
+
+Break down your investigation by type.
+
+6.1 File System Analysis
+Notable files and directories
+Suspicious naming conventions
+Timestamp anomalies
+Files that required further inspection
+6.2 Content Analysis
+Encoded or transformed data encountered
+Methods used to interpret or decode content
+Indicators of layered or staged information
+
+Focus on process and reasoning, not just results.
+
+6.3 Behavioral Indicators
+Evidence of user or attacker activity
+Signs of execution or interaction
+Correlation between different artifacts
+7. Timeline Reconstruction
+
+Reconstruct events in order.
 
 Time	Event	Source
 		
 
 Focus on:
 
-Initial access
-Execution
-Persistence (if any)
-Data access or exfiltration
-7. Indicators of Compromise (IOCs)
+Initial access or trigger event
+Subsequent actions
+Any gaps or inconsistencies
+Final observable state
 
-List all discovered indicators.
+This is one of the most important sections.
 
-7.1 File-Based
-Filenames
-Hashes
-7.2 Network-Based
-Domains
-IP addresses
-URLs
-7.3 Host-Based
-Processes
-Commands
-Registry / config changes (if applicable)
-8. Attack Analysis
+8. Correlation and Linking
 
-Explain what the attacker did and how.
+Season 2 expects this explicitly.
 
-Initial access method
-Execution method
-Persistence mechanism (if present)
-Privilege escalation (if any)
-Lateral movement (if any)
-Command and control behavior
+Describe how you connected separate pieces of evidence:
 
-Map behavior to known techniques where possible.
+How one artifact led to another
+How different data sources reinforced each other
+How you avoided false assumptions
 
-9. Tools and Methodology
+You are not just finding things. You are connecting them.
 
-Explain how you solved it.
+9. Indicators of Compromise (IOCs)
 
-Tools used
-Why you chose them
-Key commands or workflows (sanitized if needed)
-Any dead ends or pivots
-10. Findings and Conclusions
+List all relevant indicators.
 
-Summarize the important takeaways.
+9.1 File-Based
+Names
+Hashes (if applicable)
+9.2 Logical Indicators
+Patterns
+Strings
+Identifiers
+9.3 Behavioral Indicators
+Actions inferred from evidence
+10. Attack Analysis
 
-Root cause
-Impact
-What made this challenge difficult
-What made it solvable
-11. Recommendations
+Explain what happened from the attacker’s perspective.
 
-Provide defensive recommendations.
+Entry point (if identifiable)
+Actions taken
+Methods used
+Level of sophistication
 
-Detection strategies
-Prevention strategies
-Logging improvements
-Hardening suggestions
-12. Flag(s)
+Do not assume. Base conclusions only on evidence.
 
-List all flags discovered.
+11. Methodology
+
+Explain how you approached the problem.
+
+Tools used and why
+Workflow
+Key pivots in your investigation
+Dead ends and how you corrected course
+
+This section matters more than the final answer.
+
+12. Findings and Conclusions
+
+Summarize the investigation.
+
+What actually happened
+What evidence supports it
+Any uncertainties
+Overall confidence level
+13. Flag(s)
+
+Provide all discovered flags.
 
 RRSW{...}
 
-Explain briefly how each was obtained.
+For each flag:
 
-13. Lessons Learned
+Where it was found
+How it was derived
+What it represents
+14. Lessons Learned
 
-Personal or team reflections.
+Reflect on the process.
 
 What you learned
+What slowed you down
 What you would do differently
-Skills or knowledge gaps identified
-14. Appendix
+Skills improved or needed
+15. Appendix
 
-Optional deeper technical details.
+Optional, but encouraged.
 
-14.1 Decoding / Decryption Steps
-14.2 Scripts Used
-14.3 Raw Outputs
-14.4 Additional Notes
-Submission Guidelines
-Write clearly and concisely
-Show your reasoning, not just the answer
-Do not include brute-force dumps without explanation
-Focus on analysis, not just tool output
-Assume a reviewer will validate your process (we will)
-This is not just about getting the flag.
-This is about understanding what happened, how it happened, and why it matters.
+15.1 Decoding or Analysis Steps
+15.2 Commands or Queries Used
+15.3 Raw Outputs
+15.4 Supporting Notes
+Season 2 Guidance (Read Before Submitting)
+
+This challenge is not about speed. It is about analysis discipline.
+
+Do not jump straight to decoding everything
+Understand the structure before interacting with it
+Treat artifacts as part of a narrative, not isolated puzzles
+Assume everything is there for a reason
+Avoid brute force unless justified
+
+You are expected to demonstrate:
+
+Observation
+Correlation
+Reasoning
+Restraint
+Reviewer Expectations
+
+Submissions are evaluated based on:
+
+Clarity of thought
+Evidence-based conclusions
+Quality of reconstruction
+Depth of analysis
+Ability to explain decisions
+
+Not just correctness.
+
+HOWEVER; at the end of the day....This is a game.  Have fun! Just play, discover, and enjoy yourself.  Welcome to my home.
