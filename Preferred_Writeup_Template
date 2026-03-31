@@ -1,0 +1,154 @@
+RRSW DFIR Post-Play Writeup Template
+1. Case Information
+
+Case Name:
+Challenge Name / ID:
+Analyst Name / Handle:
+Team Name (if applicable):
+Date of Submission:
+
+Environment Used:
+
+OS:
+Tools:
+Version(s):
+2. Executive Summary
+
+Provide a clear, high-level summary of the incident.
+
+Include:
+
+What happened
+How it was identified
+What the root cause was
+What the final outcome was
+
+This should be understandable to a non-technical stakeholder.
+
+3. Scope and Objectives
+
+Define what you were asked to do.
+
+What was the goal of the challenge
+What artifacts or systems were provided
+What questions needed to be answered
+4. Initial Triage
+
+Describe your first-pass analysis.
+
+File type identification
+Integrity checks (hashes if applicable)
+Initial observations
+Anything immediately suspicious
+5. Artifact Analysis
+
+Break down the provided data.
+
+5.1 File System Analysis
+Directory structure
+Notable files
+Suspicious naming or timestamps
+5.2 Log Analysis
+Relevant logs identified
+Key entries
+Timeline indicators
+5.3 Memory / Process Indicators (if applicable)
+Running processes
+Anomalies
+Parent-child relationships
+6. Timeline Reconstruction
+
+Build a chronological sequence of events.
+
+Time	Event	Source
+		
+
+Focus on:
+
+Initial access
+Execution
+Persistence (if any)
+Data access or exfiltration
+7. Indicators of Compromise (IOCs)
+
+List all discovered indicators.
+
+7.1 File-Based
+Filenames
+Hashes
+7.2 Network-Based
+Domains
+IP addresses
+URLs
+7.3 Host-Based
+Processes
+Commands
+Registry / config changes (if applicable)
+8. Attack Analysis
+
+Explain what the attacker did and how.
+
+Initial access method
+Execution method
+Persistence mechanism (if present)
+Privilege escalation (if any)
+Lateral movement (if any)
+Command and control behavior
+
+Map behavior to known techniques where possible.
+
+9. Tools and Methodology
+
+Explain how you solved it.
+
+Tools used
+Why you chose them
+Key commands or workflows (sanitized if needed)
+Any dead ends or pivots
+10. Findings and Conclusions
+
+Summarize the important takeaways.
+
+Root cause
+Impact
+What made this challenge difficult
+What made it solvable
+11. Recommendations
+
+Provide defensive recommendations.
+
+Detection strategies
+Prevention strategies
+Logging improvements
+Hardening suggestions
+12. Flag(s)
+
+List all flags discovered.
+
+RRSW{...}
+
+Explain briefly how each was obtained.
+
+13. Lessons Learned
+
+Personal or team reflections.
+
+What you learned
+What you would do differently
+Skills or knowledge gaps identified
+14. Appendix
+
+Optional deeper technical details.
+
+14.1 Decoding / Decryption Steps
+14.2 Scripts Used
+14.3 Raw Outputs
+14.4 Additional Notes
+Submission Guidelines
+Write clearly and concisely
+Show your reasoning, not just the answer
+Do not include brute-force dumps without explanation
+Focus on analysis, not just tool output
+Assume a reviewer will validate your process (we will)
+This is not just about getting the flag.
+This is about understanding what happened, how it happened, and why it matters.
